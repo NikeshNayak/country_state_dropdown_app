@@ -35,8 +35,10 @@ lib/
 
 - **Flutter** & **Dart**
 - **BLoC** (flutter_bloc) – for predictable state management
-- **Freezed** – for immutable data models
+- **Retrofit** for API calls
+- **Freezed & Json Serializable** for immutable models
 - **Dio** – for HTTP client
+- **build_runner** - for auto generated files
 - **Mockito** – for unit & widget tests
 - **flutter_test / bloc_test** – testing tools
 
@@ -84,19 +86,37 @@ Run all tests using:
 flutter test
 ```
 
+
+## 🔧 Code Generation
+
+This project uses code generation tools with `freezed`, `json_serializable`, and `retrofit`.
+
+### Before Running the Project
+
+After cloning the repo and running `flutter pub get`, run:
+
+```bash
+dart run build_runner build
+```
+
+> 🔁 Optional (for development):
+```bash
+dart run build_runner watch
+```
+
+This will generate:
+
+- `.g.dart` and `.freezed.dart` files for data models.
+- API client code with `retrofit`.
+
 ---
 
-## 🚀 Running the App
+## ▶️ How to Run
 
-1. Clone the repo
-2. Run pub get:  
-   ```bash
-   flutter pub get
-   ```
-3. Run the app:
-   ```bash
-   flutter run
-   ```
+1. Clone the repository.
+2. Run `flutter pub get`.
+3. Run `dart run build_runner build`.
+4. Launch the app using `flutter run`.
 
 ---
 
