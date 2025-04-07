@@ -14,7 +14,7 @@ void showSnackMessage({required BuildContext context, required String title, req
         children: [
           Icon(
             icon,
-            color: Colors.white.withOpacity(0.5),
+            color: Colors.white.withValues(alpha: 0.5),
           ),
           const SizedBox(width: 10),
           Expanded(
