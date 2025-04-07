@@ -5,7 +5,7 @@ import 'package:country_state_dropdown_app/features/location/domain/usecases/loc
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 
-import '../../../../mocks/mocks.mocks.dart';
+import '../../../../mocks/location_repository_mocks.mocks.dart';
 
 void main() {
   late MockLocationRepository mockRepo;
