@@ -16,53 +16,46 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$CountriesModel {
 
-  int get id;
-
-  String get value;
-
-  /// Create a copy of CountriesModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @pragma('vm:prefer-inline')
-  $CountriesModelCopyWith<CountriesModel> get copyWith =>
-      _$CountriesModelCopyWithImpl<CountriesModel>(this as CountriesModel, _$identity);
+ int get id; String get value;
+/// Create a copy of CountriesModel
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$CountriesModelCopyWith<CountriesModel> get copyWith => _$CountriesModelCopyWithImpl<CountriesModel>(this as CountriesModel, _$identity);
 
   /// Serializes this CountriesModel to a JSON map.
   Map<String, dynamic> toJson();
 
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType && other is CountriesModel &&
-        (identical(other.id, id) || other.id == id) &&
-        (identical(other.value, value) || other.value == value));
-  }
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is CountriesModel&&(identical(other.id, id) || other.id == id)&&(identical(other.value, value) || other.value == value));
+}
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, id, value);
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,value);
 
-  @override
-  String toString() {
-    return 'CountriesModel(id: $id, value: $value)';
-  }
+@override
+String toString() {
+  return 'CountriesModel(id: $id, value: $value)';
+}
 
 
 }
 
 /// @nodoc
-abstract mixin class $CountriesModelCopyWith<$Res> {
-  factory $CountriesModelCopyWith(CountriesModel value,
-      $Res Function(CountriesModel) _then) = _$CountriesModelCopyWithImpl;
+abstract mixin class $CountriesModelCopyWith<$Res>  {
+  factory $CountriesModelCopyWith(CountriesModel value, $Res Function(CountriesModel) _then) = _$CountriesModelCopyWithImpl;
+@useResult
+$Res call({
+ int id, String value
+});
 
-  @useResult
-  $Res call({
-    int id, String value
-  });
+
 
 
 }
-
 /// @nodoc
 class _$CountriesModelCopyWithImpl<$Res>
     implements $CountriesModelCopyWith<$Res> {
@@ -71,78 +64,69 @@ class _$CountriesModelCopyWithImpl<$Res>
   final CountriesModel _self;
   final $Res Function(CountriesModel) _then;
 
-  /// Create a copy of CountriesModel
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? id = null, Object? value = null,}) {
-    return _then(_self.copyWith(
-      id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-      as int, value: null == value ? _self.value : value // ignore: cast_nullable_to_non_nullable
-    as String,
-    ));
-  }
+/// Create a copy of CountriesModel
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? value = null,}) {
+  return _then(_self.copyWith(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as int,value: null == value ? _self.value : value // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
+}
 
 }
 
 
 /// @nodoc
 @JsonSerializable()
+
 class _CountriesModel implements CountriesModel {
   const _CountriesModel({required this.id, required this.value});
-
   factory _CountriesModel.fromJson(Map<String, dynamic> json) => _$CountriesModelFromJson(json);
 
-  @override final int id;
-  @override final String value;
+@override final  int id;
+@override final  String value;
 
-  /// Create a copy of CountriesModel
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @pragma('vm:prefer-inline')
-  _$CountriesModelCopyWith<_CountriesModel> get copyWith =>
-      __$CountriesModelCopyWithImpl<_CountriesModel>(this, _$identity);
+/// Create a copy of CountriesModel
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$CountriesModelCopyWith<_CountriesModel> get copyWith => __$CountriesModelCopyWithImpl<_CountriesModel>(this, _$identity);
 
-  @override
-  Map<String, dynamic> toJson() {
-    return _$CountriesModelToJson(this,);
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$CountriesModelToJson(this, );
+}
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _CountriesModel &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.value, value) || other.value == value));
-  }
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _CountriesModel&&(identical(other.id, id) || other.id == id)&&(identical(other.value, value) || other.value == value));
+}
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, id, value);
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,value);
 
-  @override
-  String toString() {
-    return 'CountriesModel(id: $id, value: $value)';
-  }
+@override
+String toString() {
+  return 'CountriesModel(id: $id, value: $value)';
+}
 
 
 }
 
 /// @nodoc
 abstract mixin class _$CountriesModelCopyWith<$Res> implements $CountriesModelCopyWith<$Res> {
-  factory _$CountriesModelCopyWith(_CountriesModel value,
-      $Res Function(_CountriesModel) _then) = __$CountriesModelCopyWithImpl;
+  factory _$CountriesModelCopyWith(_CountriesModel value, $Res Function(_CountriesModel) _then) = __$CountriesModelCopyWithImpl;
+@override @useResult
+$Res call({
+ int id, String value
+});
 
-  @override
-  @useResult
-  $Res call({
-    int id, String value
-  });
+
 
 
 }
-
 /// @nodoc
 class __$CountriesModelCopyWithImpl<$Res>
     implements _$CountriesModelCopyWith<$Res> {
@@ -151,17 +135,15 @@ class __$CountriesModelCopyWithImpl<$Res>
   final _CountriesModel _self;
   final $Res Function(_CountriesModel) _then;
 
-  /// Create a copy of CountriesModel
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $Res call({Object? id = null, Object? value = null,}) {
-    return _then(_CountriesModel(
-      id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-      as int, value: null == value ? _self.value : value // ignore: cast_nullable_to_non_nullable
-    as String,
-    ));
-  }
+/// Create a copy of CountriesModel
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? value = null,}) {
+  return _then(_CountriesModel(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as int,value: null == value ? _self.value : value // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
+}
 
 
 }

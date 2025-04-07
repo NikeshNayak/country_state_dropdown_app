@@ -20,7 +20,9 @@ class _LocationRemoteApiService implements LocationRemoteApiService {
   final ParseErrorLogger? errorLogger;
 
   @override
-  Future<HttpResponse<List<CountriesModel>>> getCountriesList({String apiKey = xAPIKey}) async {
+  Future<HttpResponse<List<CountriesModel>>> getCountriesList({
+    String apiKey = xAPIKey,
+  }) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{r'X-API-Key': apiKey};
@@ -28,7 +30,12 @@ class _LocationRemoteApiService implements LocationRemoteApiService {
     const Map<String, dynamic>? _data = null;
     final _options = _setStreamType<HttpResponse<List<CountriesModel>>>(
       Options(method: 'GET', headers: _headers, extra: _extra)
-          .compose(_dio.options, '/countries', queryParameters: queryParameters, data: _data)
+          .compose(
+            _dio.options,
+            '/countries',
+            queryParameters: queryParameters,
+            data: _data,
+          )
           .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
     );
     final _result = await _dio.fetch<List<dynamic>>(_options);
@@ -36,7 +43,10 @@ class _LocationRemoteApiService implements LocationRemoteApiService {
     try {
       _value =
           _result.data!
-              .map((dynamic i) => CountriesModel.fromJson(i as Map<String, dynamic>))
+              .map(
+                (dynamic i) =>
+                    CountriesModel.fromJson(i as Map<String, dynamic>),
+              )
               .toList();
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
@@ -71,7 +81,9 @@ class _LocationRemoteApiService implements LocationRemoteApiService {
     try {
       _value =
           _result.data!
-              .map((dynamic i) => StatesModel.fromJson(i as Map<String, dynamic>))
+              .map(
+                (dynamic i) => StatesModel.fromJson(i as Map<String, dynamic>),
+              )
               .toList();
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
