@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+const String baseUrl = "https://fedt.unruffledneumann.xyz/api/v1";
+const String xAPIKey = "rLn*xzeZ%U+(PRuK%:v@C(a3j=<.[TWX(F^,EDrv";
+
 void showSnackMessage({required BuildContext context, required String title, required String text, required IconData icon, Color color = Colors.red, int seconds = 2, bool isFloating = true}) {
   ScaffoldMessenger.of(context).removeCurrentSnackBar();
   ScaffoldMessenger.of(context).showSnackBar(
