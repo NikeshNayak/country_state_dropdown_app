@@ -1,4 +1,5 @@
-import 'package:bloc/bloc.dart';
+import 'package:country_state_dropdown_app/features/location/presentation/blocs/get_countries_list/get_countries_list_bloc.dart';
+import 'package:country_state_dropdown_app/features/location/presentation/blocs/get_states_list/get_states_list_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -30,7 +31,10 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
-      providers: [],
+      providers: [
+        BlocProvider<GetCountriesListBloc>(create: (context) => sl()),
+        BlocProvider<GetStatesListBloc>(create: (context) => sl()),
+      ],
       child: MaterialApp(
         title: 'Country State Dropdown App ',
         debugShowCheckedModeBanner: false,
